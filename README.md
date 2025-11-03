@@ -6,6 +6,86 @@ _Last updated: January 2025_
 
 GettingStoned ("we," "our," or "us") is committed to protecting your privacy and ensuring transparency about how we collect, use, and safeguard your information when you use our Buddhist meditation and mindfulness mobile application. This comprehensive Privacy Policy explains our data practices across all features of the app.
 
+---
+
+## ⚠️ IMPORTANT: TrueDepth API Usage
+
+**This app uses Apple's TrueDepth API (ARKit Face Tracking). All facial data processing occurs entirely on your device and is never stored or transmitted.**
+
+### Purpose and Functionality
+
+Our app uses Apple's TrueDepth API exclusively for the following features:
+- **Mantra Counting**: Detecting mouth movements to count mantra recitations during meditation
+- **Prostration Detection**: Analyzing body poses for meditation practice tracking
+
+### Data Collected via TrueDepth API
+
+When you use features that require TrueDepth:
+- **Facial Landmark Data**: 3D facial mesh coordinates (real-time, frame-by-frame)
+- **Blend Shape Coefficients**: 
+  - Jaw opening measurements (`jawOpen`)
+  - Mouth funnel detection (`mouthFunnel`)
+  - Mouth puckering measurements (`mouthPucker`)
+  - Lip rounding scores (`roundScore`)
+- **Face Geometry**: Facial feature positions and orientations
+- **Depth Data**: Spatial depth information for pose estimation
+
+### Data Processing (On-Device Only)
+
+- **All processing occurs entirely on your device** using ARKit
+- **Real-time processing**: Data is analyzed frame-by-frame (typically 30 FPS)
+- **No storage**: Facial data is discarded immediately after each frame is processed
+- **No transmission**: Facial data is never sent to our servers or any third parties
+- **Local only**: Data remains on your device at all times
+- **No cloud storage**: We do not upload, store, or sync any facial data
+
+### Apple APIs Used
+
+- `ARFaceTrackingConfiguration` - Configures TrueDepth camera access
+- `ARSCNView` - Displays AR face tracking visualization
+- `ARFaceAnchor` - Provides facial landmark and blend shape data
+- `ARSCNFaceGeometry` - Processes 3D facial geometry
+- `AVCaptureDevice` (TrueDepth camera) - Camera access for face tracking
+
+### Data Retention
+
+- **Zero retention**: Facial data is discarded immediately after processing each frame
+- **No persistent storage**: We do not save any facial data to your device storage or our servers
+- **Session-based only**: Data exists only in active memory during active meditation sessions
+- **No historical data**: We do not maintain any history of facial measurements
+
+### User Control
+
+You have complete control over TrueDepth API usage:
+- **Camera Permission**: Grant or revoke camera access in iOS Settings → GettingStoned → Camera
+- **Feature Disable**: You can disable mantra counting features that use TrueDepth
+- **Alternative Methods**: App provides manual counting alternatives that don't require camera access
+- **No Requirement**: TrueDepth usage is optional; the app functions fully without it
+- **Account Deletion**: You can delete your account at any time through Settings → Profile Settings → Delete Account
+
+### Purpose Limitation
+
+TrueDepth API is used **exclusively** for:
+1. Counting mantra recitations during meditation practice
+2. Tracking prostration movements during meditation practice
+
+We **do NOT** use TrueDepth API for:
+- ❌ Face recognition or identification
+- ❌ Emotion detection or analysis beyond meditation practice
+- ❌ Advertising or marketing purposes
+- ❌ Biometric authentication
+- ❌ User profiling or tracking
+- ❌ Any purpose other than meditation practice features
+
+### Compliance
+
+- ✅ Complies with Apple's App Store Review Guidelines 5.1.1 (Privacy - Data Collection and Storage)
+- ✅ Complies with privacy requirements for TrueDepth API usage
+- ✅ All processing is on-device as required by Apple's guidelines
+- ✅ No data sharing with third parties
+- ✅ User consent required via iOS camera permission prompt
+
+
 ## Information We Collect
 
 ### 1. Location Data
@@ -36,6 +116,9 @@ GettingStoned ("we," "our," or "us") is committed to protecting your privacy and
 - **Privacy**: All computer vision processing occurs locally on your device
 
 #### Mantra Counting (TrueDepth Camera)
+
+**IMPORTANT**: This section describes our use of Apple's TrueDepth API. All data collection and processing described below occurs entirely on your device and is never stored or transmitted. For complete details, see the "TrueDepth API Usage" section above.
+
 - **Facial Landmark Data**: We collect real-time 3D facial mesh data and blend shape coefficients
 - **Specific Data Points**:
   - Jaw opening measurements (jawOpen)
@@ -255,9 +338,16 @@ We explicitly do not collect the following types of data:
 - **Impact**: Revoking location access disables karma mapping features
 
 ### Camera Permissions
-- **TrueDepth Camera**: Required for mantra counting feature
-- **Control**: Can be disabled in iOS Settings
-- **Impact**: Disabling camera access switches to manual mantra counting
+- **TrueDepth Camera**: Required for mantra counting and prostration detection features
+  - Uses ARKit Face Tracking (TrueDepth API)
+  - All processing occurs on-device
+  - No facial data is stored or transmitted
+  - See "TrueDepth API Usage" section above for complete details
+- **Rear Camera**: Alternative for prostration detection if TrueDepth unavailable (same on-device processing)
+- **Control**: Can be disabled in iOS Settings → GettingStoned → Camera
+- **Impact**: 
+  - Disabling TrueDepth camera: Switches to manual mantra counting
+  - Disabling camera access: Disables all camera-based features (manual counting still available)
 
 ### Health Permissions
 - **Apple Health**: Required for sleep tracking and wellness insights
