@@ -1,10 +1,10 @@
-# Privacy Policy for GettingStoned
+# Privacy Policy for Buddhist Reflection
 
-_Last updated: January 2025_
+_Last updated: December 4, 2025_
 
 ## Overview
 
-GettingStoned ("we," "our," or "us") is committed to protecting your privacy and ensuring transparency about how we collect, use, and safeguard your information when you use our Buddhist meditation and mindfulness mobile application. This comprehensive Privacy Policy explains our data practices across all features of the app.
+Buddhist Reflection ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
 
 ---
 
@@ -85,427 +85,278 @@ We **do NOT** use TrueDepth API for:
 - ✅ No data sharing with third parties
 - ✅ User consent required via iOS camera permission prompt
 
+---
 
-## Information We Collect
-
-### 1. Location Data
-
-#### Karma Map and Spiritual Journey Tracking
-- **GPS Coordinates**: We collect your device's location coordinates (latitude and longitude) when you use the karma map feature
-- **Accuracy**: Location data is collected with 100-meter accuracy and updated every 30 seconds when the app is active
-- **Purpose**: To visualize your meditation journey on a map, track where you practice meditation, and provide location-based spiritual insights
-- **Storage**: Location coordinates are stored in Firebase with your user account for cross-device synchronization
-- **Retention**: Location data is retained as long as your account is active
-
-#### CarPlay Integration
-- **Driving Behavior**: We monitor driving patterns and behavior when connected to CarPlay
-- **Location Context**: Location data is used to provide context-aware driving insights and ethical driving guidance
-- **Purpose**: To track calm vs. aggressive driving patterns and award merit stones for mindful driving
-- **Processing**: Driving behavior analysis happens on-device; only aggregated insights are stored
-
-### 2. Computer Vision and Machine Learning Data
-
-#### Prostration Detection
-- **Pose Data**: We use Core ML and Vision framework to analyze your body poses for prostration counting
-- **Processing**: All pose analysis happens entirely on your device using the ProstrationClassifier ML model
-- **Data Flow**: 
-  - Input: 450 frames (15 seconds at 30 FPS) of pose data
-  - Processing: Real-time pose estimation via Vision framework
-  - Output: Action predictions (prostration vs. other movements)
-- **Storage**: No raw pose data is stored; only prostration counts and session statistics
-- **Privacy**: All computer vision processing occurs locally on your device
-
-#### Mantra Counting (TrueDepth Camera)
-
-**IMPORTANT**: This section describes our use of Apple's TrueDepth API. All data collection and processing described below occurs entirely on your device and is never stored or transmitted. For complete details, see the "TrueDepth API Usage" section above.
-
-- **Facial Landmark Data**: We collect real-time 3D facial mesh data and blend shape coefficients
-- **Specific Data Points**:
-  - Jaw opening measurements (jawOpen)
-  - Mouth funnel detection (mouthFunnel)
-  - Mouth puckering (mouthPucker)
-  - Lip rounding scores (roundScore)
-- **APIs Used**: ARFaceTrackingConfiguration, ARSCNView, ARFaceAnchor, ARSCNFaceGeometry
-- **Processing**: All facial data is processed entirely on your device in real-time using ARKit
-- **Retention**: Facial data is discarded immediately after processing each frame
-- **Storage**: No facial data is stored or transmitted to any servers
-
-#### NSFW Content Detection
-- **Content Analysis**: We use machine learning models to detect inappropriate content
-- **Processing**: Content filtering happens entirely on your device
-- **Purpose**: To maintain a safe and respectful environment for spiritual practice
-- **Data**: No content is stored; only filtering decisions are made locally
-
-### 3. Health and Wellness Data
-
-#### Apple Health Integration
-- **Sleep Data**: We read sleep patterns and duration from Apple Health
-- **Health Metrics**: We may read wellness metrics to provide holistic spiritual insights
-- **Purpose**: To award merit stones for healthy sleep patterns and track overall wellness
-- **Permissions**: Requires explicit user consent through Apple Health permissions
-- **Storage**: Only aggregated sleep statistics are stored; raw health data remains in Apple Health
-
-#### Muse EEG Integration
-- **Brain Activity**: We collect real-time EEG data from your Muse headband via Bluetooth
-- **Metrics Collected**:
-  - Calmness levels
-  - Focus scores
-  - Meditation quality metrics
-  - Brain wave patterns
-- **Processing**: EEG data is processed locally on your device
-- **Purpose**: To provide real-time meditation feedback and enhance mindfulness practice
-- **Storage**: Only meditation session summaries and scores are stored; raw EEG data is not retained
-
-### 4. Meditation and Spiritual Practice Data
-
-#### Stone Entries
-- **Stone Types**: White stones (merit) and black stones (non-virtue) you select
-- **Categories**: Spiritual practice categories (patience, compassion, wisdom, etc.)
-- **Reflection Notes**: Personal notes and reflections you choose to record
-- **Timestamps**: Date and time of each meditation session
-- **Location Context**: Optional location coordinates where you practiced
-- **Purpose**: To track your spiritual progress and provide personalized insights
-
-#### Session Data
-- **Meditation Duration**: Length of meditation sessions
-- **Practice Type**: Type of meditation (mantra, prostration, mindfulness, etc.)
-- **Progress Tracking**: Cumulative counts and streaks
-- **Achievements**: Merit stones earned and spiritual milestones reached
-
-#### Advanced Spiritual Analytics
-- **Bayesian Enlightenment Analysis**: Statistical modeling of your spiritual development using Beta-Binomial models
-- **Karma Scoring**: Volume-adjusted karma calculations with comprehensive metrics
-- **Predictive Analytics**: 30-day and 90-day spiritual development projections
-- **Engagement Metrics**: Consistency scores, streak analysis, and practice patterns
-- **Realm Balance**: Analysis of mind, speech, body, and special practice realms
-- **Category Weighting**: Spiritual practice categories weighted by importance (merit: 2.5x, insight: 2.0x, meditation: 1.5x)
-
-### 5. Technical and Analytics Data
-
-#### App Usage Analytics
-- **Performance Metrics**: App crashes, performance issues, and stability data
-- **Feature Usage**: Which features you use most frequently
-- **Session Duration**: How long you use the app
-- **Purpose**: To improve app functionality and user experience
-- **Collection**: Through Firebase Analytics (anonymized)
-
-#### Device Information
-- **Device Type**: iPhone, iPad model and iOS version
-- **App Version**: Current version of the GettingStoned app
-- **Technical Specifications**: Device capabilities for AR and ML features
-- **Purpose**: To ensure compatibility and optimize performance
-
-## Data Processing and Storage
-
-### On-Device Processing (Private)
-The following data is processed entirely on your device and never transmitted:
-
-- ✅ **Facial Recognition Data**: All TrueDepth camera data for mantra counting
-- ✅ **Pose Detection Data**: All body pose analysis for prostration counting
-- ✅ **EEG Data**: Real-time brain activity processing from Muse headband
-- ✅ **NSFW Content Detection**: All content filtering decisions
-- ✅ **AR Stone Placement**: 3D rendering and placement of virtual stones
-- ✅ **Personal Reflections**: Your meditation notes and thoughts
-
-### Cloud Processing (Firebase/CloudKit)
-The following data is synchronized across your devices:
-
-- 🔄 **Location Coordinates**: GPS coordinates for karma mapping
-- 🔄 **Stone Entries**: Your meditation progress and stone collections
-- 🔄 **Session Statistics**: Aggregated meditation session data
-- 🔄 **User Preferences**: App settings and customization
-- 🔄 **Karma Statistics**: Spiritual progress metrics
-- 🔄 **Cross-Device Sync**: Data synchronization between your devices
-- 🔄 **Bayesian Analysis Results**: Enlightenment probability calculations and spiritual development projections
-- 🔄 **Karma Scoring Data**: Volume-adjusted karma scores, engagement metrics, and consistency analysis
-- 🔄 **Leaderboard Data**: Anonymous rankings and comparative spiritual progress metrics
-- 🔄 **Predictive Analytics**: 30-day and 90-day spiritual development forecasts
-
-### Third-Party Services
-
-#### Firebase (Google)
-- **Purpose**: Analytics, crash reporting, data synchronization, and advanced spiritual analytics
-- **Data Shared**: 
-  - Anonymized usage statistics and app performance data
-  - Stone entries and spiritual practice data for karma analysis
-  - Bayesian enlightenment probability calculations
-  - Volume-adjusted karma scoring and leaderboard rankings
-  - Predictive spiritual development analytics
-- **Privacy**: 
-  - Firebase Analytics data is anonymized and aggregated
-  - Spiritual practice data is processed for personalized insights
-  - Individual user data is isolated and private
-- **Location**: Data stored in Google Cloud with standard security measures
-- **Advanced Functions**:
-  - `bayesianAnalysis.js`: Enlightenment probability calculations using Monte Carlo simulation
-  - `karmicAnalysis.js`: Volume-adjusted karma scoring with comprehensive metrics
-  - `getKarmicAnalysis.js`: User karma analysis and comparison
-  - `leaderboardAggregation.js`: Anonymous leaderboard functionality
-  - `generateStones.js`: Personalized stone recommendations
-
-#### CloudKit (Apple)
-- **Purpose**: Cross-device data synchronization
-- **Data Shared**: Your meditation progress, stone entries, and preferences
-- **Privacy**: Data is encrypted and stored in your personal iCloud account
-- **Location**: Data stored in Apple's secure data centers
-
-## Data We Do NOT Collect
-
-We explicitly do not collect the following types of data:
-
-- ❌ **Personal Photos or Videos**: Camera is used only for pose/facial detection
-- ❌ **Audio Recordings**: Microphone is not accessed by the app
-- ❌ **Personal Messages**: No communication or messaging features
-- ❌ **Contact Information**: No access to your address book or contacts
-- ❌ **Browsing History**: Browser features are sandboxed and isolated
-- ❌ **Financial Information**: No payment or financial data collection
-- ❌ **Raw Biometric Data**: Facial and pose data is processed locally and discarded
-- ❌ **Personal Identifiable Information**: No names, addresses, or personal details
-
-## Machine Learning and AI Features
-
-### On-Device AI Processing
-- **Prostration Detection**: Core ML model processes pose data locally
-- **Mantra Counting**: Vision framework analyzes facial movements locally
-- **Content Filtering**: NSFW detection happens on-device
-- **EEG Analysis**: Brain activity processing occurs locally
-- **AR Rendering**: 3D stone placement and visualization on-device
-
-### Cloud-Based AI Processing
-- **Bayesian Enlightenment Analysis**: Statistical modeling using Beta-Binomial models with Monte Carlo simulation
-- **Karma Scoring**: Volume-adjusted karma calculations with logarithmic scaling
-- **Predictive Analytics**: Future spiritual development projections using historical patterns
-- **Engagement Analysis**: Consistency scoring and streak analysis
-- **Category Weighting**: Spiritual practice importance weighting (merit: 2.5x, insight: 2.0x, meditation: 1.5x)
-
-### AI Model Information
-- **ProstrationClassifier**: Custom Core ML model for pose recognition
-- **Vision Framework**: Apple's on-device computer vision APIs
-- **ARKit**: Apple's augmented reality framework for facial tracking
-- **Muse SDK**: Interaxon's brain-computer interface processing
-- **Bayesian Models**: Custom statistical models for spiritual development analysis
-- **Karma Algorithms**: Volume-adjusted scoring with comprehensive metrics
-
-### Data Privacy in AI
-- **No Training Data**: We do not use your personal data to train AI models
-- **Local Processing**: All biometric and behavioral AI inference happens on your device
-- **Cloud Analytics**: Spiritual practice patterns are analyzed for personalized insights
-- **Anonymized Processing**: Individual spiritual data is processed privately
-- **Model Updates**: AI models are updated through app updates, not data collection
-
-## Advanced Spiritual Analytics
-
-### Bayesian Enlightenment Analysis
-- **Purpose**: To provide personalized spiritual development insights using statistical modeling
-- **Data Processed**: Your stone entries, spiritual practice patterns, meditation streaks, and category preferences
-- **Method**: Beta-Binomial statistical model with Monte Carlo simulation (10,000 samples)
-- **Output**: Enlightenment probability calculations and spiritual development projections
-- **Privacy**: Individual spiritual patterns are processed privately and not shared with other users
-- **Storage**: Analysis results stored in Firebase for personalized insights and progress tracking
-
-### Karma Scoring System
-- **Purpose**: To provide fair and comprehensive karma assessment that balances quality and quantity
-- **Data Processed**: Stone counts, categories, engagement levels, consistency metrics, and practice patterns
-- **Formula**: Multi-factor scoring including positive actions (40%), negative avoidance (30%), engagement (20%), and consistency (10%)
-- **Volume Adjustment**: Logarithmic scaling to prevent gaming while rewarding consistent practice
-- **Category Weighting**: 
-  - Merit practice stones: 2.5x weight (highest)
-  - Insight/emptiness analysis stones: 2.0x weight
-  - Meditation stones: 1.5x weight
-  - Regular white stones: 1.0x weight
-  - Analyzed black stones: 0.5x weight (reduced negative impact)
-- **Storage**: Karma scores and rankings stored for leaderboard and progress tracking
-
-### Predictive Spiritual Development
-- **Purpose**: To project future spiritual development and provide motivation for continued practice
-- **Data Processed**: Historical practice patterns, current streak data, and daily meditation averages
-- **Projections**: 30-day and 90-day enlightenment probability forecasts
-- **Method**: Based on current daily averages and projected consistent practice patterns
-- **Privacy**: Projections are personal and not shared with other users
-- **Storage**: Future projections stored for personalized goal setting and motivation
-
-### Leaderboard and Comparison Analytics
-- **Purpose**: To provide anonymous comparison with other practitioners for motivation
-- **Data Processed**: Aggregated karma scores, engagement metrics, and practice consistency
-- **Privacy**: Individual identities are not revealed; only anonymous rankings and metrics
-- **Storage**: Anonymous leaderboard data stored for community motivation features
-
-## User Controls and Permissions
-
-### Location Permissions
-- **When In Use**: Required for karma map and location-based insights
-- **Control**: Can be revoked at any time in iOS Settings
-- **Impact**: Revoking location access disables karma mapping features
-
-### Camera Permissions
-- **TrueDepth Camera**: Required for mantra counting and prostration detection features
-  - Uses ARKit Face Tracking (TrueDepth API)
-  - All processing occurs on-device
-  - No facial data is stored or transmitted
-  - See "TrueDepth API Usage" section above for complete details
-- **Rear Camera**: Alternative for prostration detection if TrueDepth unavailable (same on-device processing)
-- **Control**: Can be disabled in iOS Settings → GettingStoned → Camera
-- **Impact**: 
-  - Disabling TrueDepth camera: Switches to manual mantra counting
-  - Disabling camera access: Disables all camera-based features (manual counting still available)
-
-### Health Permissions
-- **Apple Health**: Required for sleep tracking and wellness insights
-- **Control**: Managed through Apple Health app permissions
-- **Impact**: Revoking health access disables sleep-based merit stones
-
-### Bluetooth Permissions
-- **Muse Headband**: Required for EEG meditation features
-- **Control**: Can be disabled in iOS Settings
-- **Impact**: Disabling Bluetooth disables Muse integration
-
-### Notification Permissions
-- **Push Notifications**: For meditation reminders and insights
-- **Control**: Can be disabled in iOS Settings
-- **Impact**: Disabling notifications stops meditation reminders
-
-## Data Security Measures
-
-### Encryption
-- **In Transit**: All data transmission uses TLS 1.3 encryption
-- **At Rest**: All stored data is encrypted using AES-256
-- **Local Storage**: Device data is protected by iOS security features
-
-### Access Controls
-- **User Authentication**: Firebase Authentication for account security
-- **Data Isolation**: Each user's data is isolated and private
-- **Admin Access**: Limited administrative access with audit logging
-
-### Security Monitoring
-- **Intrusion Detection**: Continuous monitoring for security threats
-- **Vulnerability Scanning**: Regular security assessments
-- **Incident Response**: Established procedures for security incidents
-
-## Data Retention and Deletion
-
-### Retention Periods
-- **Meditation Data**: Retained as long as your account is active
-- **Location Data**: Retained for karma mapping functionality
-- **Analytics Data**: Anonymized data retained for 2 years
-- **Biometric Data**: Not retained (processed locally and discarded)
-
-### Data Deletion
-- **Account Deletion**: Complete removal of all personal data within 30 days
-- **Partial Deletion**: Individual data points can be deleted upon request
-- **Backup Cleanup**: Data removed from all backup systems
-- **Third-Party Cleanup**: Data deletion requests sent to all service providers
-
-## International Data Transfers
-
-### Data Location
-- **Primary Storage**: United States (Firebase/Google Cloud)
-- **Backup Storage**: Multiple geographic regions for redundancy
-- **Processing**: Data processing occurs in the same regions as storage
-
-### Transfer Safeguards
-- **Standard Contractual Clauses**: EU data transfers use approved SCCs
-- **Adequacy Decisions**: Transfers to countries with adequate protection
-- **Technical Safeguards**: Encryption and access controls for all transfers
-
-## Children's Privacy
-
-### Age Restrictions
-- **Minimum Age**: App is not intended for children under 13
-- **Parental Consent**: Users under 18 should have parental supervision
-- **Data Collection**: We do not knowingly collect data from children under 13
-
-### Special Protections
-- **Limited Data**: Reduced data collection for younger users
-- **Parental Controls**: Enhanced privacy controls for family accounts
-- **Education**: Resources for parents about digital wellness
-
-## Your Rights and Choices
-
-### Access Rights
-- **Data Access**: Request a copy of all your personal data
-- **Data Portability**: Export your meditation data in standard formats
-- **Account Information**: View and update your account details
-
-### Control Rights
-- **Data Correction**: Correct inaccurate or incomplete data
-- **Data Deletion**: Request deletion of your personal data
-- **Processing Restriction**: Limit how your data is processed
-- **Objection**: Object to certain types of data processing
-
-### Communication Rights
-- **Marketing Opt-out**: Unsubscribe from promotional communications
-- **Notification Control**: Manage meditation reminders and alerts
-- **Privacy Updates**: Receive notifications about privacy policy changes
-
-## Compliance and Regulations
-
-### GDPR Compliance (European Union)
-- **Lawful Basis**: Processing based on consent and legitimate interests
-- **Data Subject Rights**: Full compliance with GDPR data subject rights
-- **Data Protection Officer**: Designated DPO for EU users
-- **Breach Notification**: 72-hour notification requirement compliance
-
-### CCPA Compliance (California)
-- **Consumer Rights**: Full compliance with California Consumer Privacy Act
-- **Opt-out Rights**: Right to opt-out of data sales (we don't sell data)
-- **Disclosure Rights**: Right to know what data is collected and used
-- **Deletion Rights**: Right to delete personal information
-
-### COPPA Compliance (Children)
-- **Parental Consent**: Required for children under 13
-- **Limited Collection**: Minimal data collection for children
-- **Parental Rights**: Parents can review and delete children's data
-
-## Changes to This Privacy Policy
-
-### Notification of Changes
-- **Material Changes**: 30-day advance notice for significant changes
-- **Minor Updates**: Immediate posting for minor clarifications
-- **Version History**: Maintained record of all policy changes
-- **User Consent**: Re-consent required for material changes
-
-### Effective Date
-- **Current Version**: January 2025
-- **Previous Versions**: Available upon request
-- **Implementation**: Changes effective immediately upon posting
-
-## Contact Information
-
-### Privacy Inquiries
-**Email**: privacy@gettingstoned.app  
-**Subject**: Privacy Policy Inquiry  
-**Response Time**: Within 72 hours
-
-### Data Protection Officer (EU Users)
-**Email**: dpo@gettingstoned.app  
-**Subject**: GDPR Data Protection Inquiry
-
-### General Support
-**Email**: support@gettingstoned.app  
-**Website**: https://github.com/your-username/buddhist-stone-app
-
-### Postal Address
-BunkCorp  
-[Your Business Address]  
-[City, State, ZIP Code]  
-United States
-
-## Additional Resources
-
-### Privacy Resources
-- **Apple Privacy**: https://www.apple.com/privacy/
-- **Google Privacy**: https://policies.google.com/privacy
-- **Firebase Privacy**: https://firebase.google.com/support/privacy
-
-### Educational Materials
-- **Digital Wellness**: Resources for mindful technology use
-- **Privacy Best Practices**: Tips for protecting your digital privacy
-- **Buddhist Ethics**: How our app aligns with Buddhist principles
+## ⚠️ IMPORTANT: Sensitive Content Analysis
+
+**This app uses Apple's Sensitive Content Analysis framework. All image analysis occurs entirely on your device and is never stored or transmitted.**
+
+### Purpose and Functionality
+
+Our app uses Apple's Sensitive Content Analysis framework exclusively for the following features:
+- **Enhanced Browser**: Detecting NSFW (Not Safe For Work) content in images on web pages you browse
+- **Karmic Tracking**: Automatically logging "black stones" when inappropriate content is detected (if auto-logging is enabled)
+
+### Data Collected via Sensitive Content Analysis
+
+When you use the Enhanced Browser feature (available with Premium subscription):
+- **Images are extracted** from web pages you visit (up to 5 images per page)
+- **Images are analyzed** using Apple's `SCSensitivityAnalyzer` API
+- **Analysis results** indicate whether sensitive/inappropriate content was detected
+
+### Data Processing (On-Device Only)
+
+- **All analysis occurs entirely on your device** using Apple's Core ML models
+- **Real-time processing**: Images are analyzed as you browse, then discarded immediately
+- **No storage**: Image data is discarded immediately after analysis
+- **No transmission**: Image data is never sent to our servers or any third parties
+- **Local only**: All sensitive content analysis happens locally on your device
+- **No cloud storage**: We do not upload, store, or sync any images or analysis results
+
+### Apple APIs Used
+
+- `SensitiveContentAnalysis` framework
+- `SCSensitivityAnalyzer` - Analyzes images for sensitive content
+- `CGImage` - Processes images for analysis
+
+### Data Retention
+
+- **Zero retention**: Image data is discarded immediately after analysis
+- **No persistent storage**: We do not save any images or analysis results to your device storage or our servers
+- **Session-based only**: Analysis occurs only during active browsing sessions
+- **Karmic tracking**: Only the fact that NSFW content was detected (resulting in a "black stone") is logged to your karmic tracking data, not the images themselves
+- **No historical data**: We do not maintain any history of analyzed images
+
+### Automatic Stone Logging
+
+When NSFW content is detected:
+- **A "black stone" is automatically logged** to your karmic tracking system (if auto-logging is enabled in browser settings)
+- **Black stones** represent negative karma in our Buddhist meditation tracking system
+- **You can control this feature** by enabling or disabling "auto-log stones" in the browser settings
+- **Only the detection result is logged**, not the actual images or content
+
+### User Control
+
+You have complete control over Sensitive Content Analysis:
+- **Feature Access**: Sensitive Content Analysis is only active in the Enhanced Browser feature (Premium subscription required)
+- **Auto-Logging Control**: Enable or disable automatic stone logging in browser settings
+- **Browsing Control**: You can navigate away from pages with detected sensitive content at any time
+- **No Requirement**: Sensitive Content Analysis is optional; you can browse without it by using other browsers
+- **Account Deletion**: You can delete your account at any time through Settings → Profile Settings → Delete Account
+
+### Purpose Limitation
+
+Sensitive Content Analysis is used **exclusively** for:
+1. Detecting inappropriate content in images on web pages
+2. Providing a safer browsing environment for meditation and mindfulness practice
+3. Supporting our karmic tracking system by identifying negative content
+
+We **do NOT** use Sensitive Content Analysis for:
+- ❌ Storing or transmitting images
+- ❌ User profiling or tracking
+- ❌ Advertising or marketing purposes
+- ❌ Any purpose other than content safety and karmic tracking
+
+### Compliance
+
+- ✅ Complies with Apple's App Store Review Guidelines
+- ✅ Complies with Apple's Sensitive Content Analysis framework requirements
+- ✅ Uses proper entitlements: `com.apple.developer.sensitivecontentanalysis.client`
+- ✅ All processing is on-device as required by Apple's guidelines
+- ✅ No data sharing with third parties
+- ✅ User control via browser settings
 
 ---
 
-_GettingStoned - Integrating ancient wisdom with modern technology for mindful living_
+## Information We Collect
 
-**Last Updated**: January 2025  
-**Version**: 2.0  
-**Effective Date**: January 1, 2025
+### Personal Reflections
+
+* Meditation reflections and thoughts you choose to record
+* Stone selections (white/black) and categories you assign
+* Timestamps of your meditation sessions
+* Location data (optional) - Only if you choose to enable location-based features for the karma map
+
+### Facial Data Collection (TrueDepth API)
+
+**IMPORTANT**: This section describes our use of Apple's TrueDepth API. All data collection and processing described below occurs entirely on your device and is never stored or transmitted.
+
+* **TrueDepth Camera Data**: Our app uses the TrueDepth camera (on supported devices like iPhone X and later) to detect mouth movements for the Mantra Counter feature and body poses for prostration detection
+* **Facial Landmark Data**: We collect real-time 3D facial mesh data and blend shape coefficients specifically for mouth movement detection and pose estimation
+* **Purpose**: This data is used exclusively for counting Buddhist mantra repetitions by detecting jaw opening, lip rounding, and mouth puckering movements, and for tracking prostration movements during meditation practice
+* **Processing**: All facial data is processed entirely on your device in real-time using ARKit and is not stored or transmitted to any servers
+* **Retention**: Facial data is discarded immediately after processing and is not retained
+* **Transmission**: Facial data is never transmitted to any external server, service, or third party
+
+### Image Analysis Data (Sensitive Content Analysis)
+
+**IMPORTANT**: This section describes our use of Apple's Sensitive Content Analysis framework. All image analysis occurs entirely on your device and is never stored or transmitted.
+
+* **Image Analysis Data**: Our app uses Apple's Sensitive Content Analysis framework to analyze images from web pages you visit in the Enhanced Browser feature
+* **Purpose**: This analysis is used exclusively for detecting NSFW (Not Safe For Work) content in images to provide a safer browsing environment and support our karmic tracking system
+* **Processing**: All image analysis is processed entirely on your device in real-time using Apple's Core ML models and is not stored or transmitted to any servers
+* **Retention**: Image data is discarded immediately after analysis and is not retained
+* **Transmission**: Image data is never transmitted to any external server, service, or third party
+* **Karmic Tracking**: Only the detection result (whether NSFW content was found) is logged as a "black stone" in your karmic tracking data, not the images themselves
+
+### Technical Information
+
+* Device push notification tokens (for sending meditation reminders) - stored securely in Firebase
+* Basic app usage analytics - anonymized and aggregated
+* Crash reports to improve app stability - anonymized error logs
+
+### Account Information
+
+* Email address (for account creation and authentication)
+* Display name (optional)
+* Member since date
+* Authentication tokens (stored securely via Firebase Authentication)
+
+---
+
+## How We Use Your Information
+
+* To provide personalized meditation reminders
+* To track your mindfulness progress through stone analytics
+* To enable hands-free mantra counting through facial movement detection (on-device processing only)
+* To provide safer web browsing through automatic NSFW content detection (on-device processing only)
+* To improve app functionality and user experience
+* To send you gentle Buddhist reflection prompts
+* To sync your meditation data across devices (stones, reflections, session history)
+* To provide location-based insights on the karma map (if location services are enabled)
+
+---
+
+## Data Storage and Security
+
+* Your data is stored securely using Firebase/Google Cloud services
+* All reflections and personal data are encrypted in transit and at rest
+* **Facial data is processed entirely on-device and is never stored or transmitted**
+* **Image analysis data is processed entirely on-device and is never stored or transmitted**
+* We implement industry-standard security measures to protect your information
+* Your meditation data is private and not shared with third parties
+* Account credentials are secured using Firebase Authentication with industry-standard encryption
+
+---
+
+## Data Sharing
+
+We do not sell, trade, or share your personal meditation data with third parties. Your reflections, stone selections, facial data, and image analysis data remain private to you. Facial data collected through the TrueDepth API and image data analyzed through Sensitive Content Analysis are processed locally on your device and are never shared with any external parties.
+
+**Third-Party Services Used:**
+* **Firebase (Google)**: Used for data storage, authentication, and push notifications. Firebase's privacy policy applies to data stored in their service.
+* **Google Analytics**: Used for anonymized app usage analytics. No personally identifiable information is shared.
+
+---
+
+## User Controls and Permissions
+
+### Camera Permissions
+
+* **TrueDepth Camera**: Required for mantra counting and prostration detection features
+  * Uses ARKit Face Tracking (TrueDepth API)
+  * All processing occurs on-device
+  * No facial data is stored or transmitted
+  * See "TrueDepth API Usage" section above for complete details
+* **Rear Camera**: Alternative for prostration detection if TrueDepth unavailable (same on-device processing)
+* **Control**: Can be disabled in iOS Settings → GettingStoned → Camera
+* **Impact**: 
+  * Disabling TrueDepth camera: Switches to manual mantra counting
+  * Disabling camera access: Disables all camera-based features (manual counting still available)
+
+### Location Permissions
+
+* **Location Services**: Optional, used only for karma map features
+* **Control**: Can be disabled in iOS Settings → GettingStoned → Location
+* **Impact**: Karma map will not show location-based features, but all other app features work normally
+
+### Account Management
+
+* **Account Deletion**: Available in Settings → Profile Settings → Delete Account
+* **Data Export**: Contact us at privacy@buddhistreflection.app to request your data export
+* **Consent Withdrawal**: Revoke camera or location permissions in iOS Settings at any time
+
+---
+
+## Push Notifications
+
+We use Firebase Cloud Messaging to send you meditation reminders. You can disable these notifications at any time through your device settings or within the app settings.
+
+---
+
+## Data Retention
+
+* Your meditation data (stones, reflections, sessions) is retained as long as you use the app
+* **Facial data is not retained** - it is processed in real-time and discarded immediately
+* **Image analysis data is not retained** - images are analyzed in real-time and discarded immediately after analysis
+* **Account data**: Retained until account deletion
+* You may request deletion of your data by:
+  - Using the in-app account deletion feature: Settings → Profile Settings → Delete Account
+  - Contacting us at privacy@buddhistreflection.app
+* Upon account deletion, all personal data is permanently removed within 30 days
+
+---
+
+## Your Rights
+
+You have the right to:
+
+* **Access your personal data** - View all your meditation data within the app
+* **Correct inaccurate data** - Edit your profile information and reflection notes
+* **Request deletion of your data** - Delete your account through Settings → Profile Settings → Delete Account
+* **Disable push notifications** - Manage notification preferences in iOS Settings or app settings
+* **Disable facial recognition features** - Revoke camera permission in iOS Settings (app will fall back to manual counting)
+* **Disable automatic stone logging** - Turn off "auto-log stones" in browser settings to prevent automatic logging of detected NSFW content
+* **Withdraw consent** - Revoke any permission at any time through iOS Settings
+* **Export your data** - Contact us at privacy@buddhistreflection.app to request a data export
+
+---
+
+## Account Deletion
+
+If you created an account, you can delete it at any time:
+
+1. Open the app and go to **Settings → Profile Settings**
+2. Scroll to the **"Account Management"** section
+3. Tap **"Delete Account"**
+4. Confirm the deletion
+
+Upon account deletion:
+- All your meditation data (stones, reflections, sessions) will be permanently deleted
+- Your Firebase Authentication account will be removed
+- All Firestore data associated with your account will be deleted
+- Local app data will be cleared
+- **Facial data**: As noted above, facial data was never stored, so there is nothing to delete
+- **Image analysis data**: As noted above, image analysis data was never stored, so there is nothing to delete
+
+Account deletion is permanent and cannot be undone.
+
+---
+
+## Children's Privacy
+
+Our app is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at privacy@buddhistreflection.app and we will delete such information.
+
+---
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any material changes by:
+- Posting the new Privacy Policy on this page
+- Updating the "Last updated" date at the top of this policy
+- Sending you a notification through the app (if significant changes are made)
+
+---
+
+## Contact Us
+
+If you have any questions about this Privacy Policy, your data, or your privacy rights, please contact us at:
+
+**Email:** privacy@buddhistreflection.app  
+**Subject:** Privacy Policy Inquiry
+
+We will respond to your inquiry within 30 days.
+
+---
+
+_Buddhist Reflection App - Bringing mindfulness to daily life_
